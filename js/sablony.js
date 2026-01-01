@@ -686,29 +686,578 @@ _____________________          _____________________
     }
 };
 
-// Add remaining templates as simplified versions
-const simpleTemplates = [
-    'prikazni-smlouva', 'smlouva-o-spolupraci', 'smlouva-o-pujcce',
-    'zalohova-faktura', 'dobropis', 'zadost-stavebni', 'zadost-zivnost',
-    'dpc', 'gdpr-policy', 'podnikatelsky-plan'
-];
+// Additional templates
+templates['dpc'] = {
+    title: 'Dohoda o pracovní činnosti',
+    content: `DOHODA O PRACOVNI CINNOSTI
+uzavrena dle § 76 zakona c. 262/2006 Sb., zakoniku prace
 
-simpleTemplates.forEach(id => {
-    if (!templates[id]) {
-        templates[id] = {
-            title: id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-            content: `VZOR DOKUMENTU: ${id.toUpperCase()}
+I. Smluvni strany
 
-Tento vzor bude brzy doplněn.
+Zamestnavatel:
+Nazev: [DOPLNIT]
+ICO: [DOPLNIT]
+Sidlo: [DOPLNIT]
 
-Pro aktuální verzi navštivte:
-- https://www.vzory-zdarma.cz
-- https://www.bezplatnapravniporadna.cz
+Zamestnanec:
+Jmeno: [DOPLNIT]
+RC: [DOPLNIT]
+Bydliste: [DOPLNIT]
 
-[DOPLNIT OBSAH DOKUMENTU]`
-        };
-    }
-});
+II. Predmet dohody
+
+Zamestnanec bude vykonavat pro zamestnavatele nasledujici praci:
+[DOPLNIT POPIS PRACE]
+
+III. Rozsah prace
+
+Prace bude vykonavana v rozsahu maximalne 20 hodin tydne.
+Prumerny tydenni rozsah: [DOPLNIT] hodin.
+
+IV. Doba trvani
+
+Dohoda se uzavira na dobu od [DOPLNIT] do [DOPLNIT].
+
+V. Misto vykonu prace
+
+[DOPLNIT]
+
+VI. Odmena
+
+1. Hodinova odmena: [DOPLNIT] Kc
+2. Odmena je splatna mesicne, vzdy k [DOPLNIT]. dni nasledujiciho mesice
+   na ucet c.: [DOPLNIT]
+
+VII. Dalsi ujednani
+
+1. Zamestnanec je povinen dodrzovat pracovni povinnosti.
+2. Zamestnavatel je povinen vytvorit podminky pro vykon prace.
+3. Dohodu lze ukoncit dohodou nebo vypovedi s 15denni vypovedi dobou.
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+_____________________          _____________________
+   Zamestnavatel                    Zamestnanec`
+};
+
+templates['prikazni-smlouva'] = {
+    title: 'Prikazni smlouva',
+    content: `PRIKAZNI SMLOUVA
+uzavrena dle § 2430 a nasl. zakona c. 89/2012 Sb., obcanskeho zakoniku
+
+I. Smluvni strany
+
+Prikazce:
+Nazev/Jmeno: [DOPLNIT]
+ICO/RC: [DOPLNIT]
+Sidlo/Adresa: [DOPLNIT]
+
+Prikaznik:
+Nazev/Jmeno: [DOPLNIT]
+ICO/RC: [DOPLNIT]
+Sidlo/Adresa: [DOPLNIT]
+
+II. Predmet smlouvy
+
+Prikaznik se zavazuje obstarat pro prikazce nasledujici zalezitost:
+[DOPLNIT POPIS CINNOSTI]
+
+III. Odmena
+
+1. Za provedeni prikazu naslusi prikaznikovi odmena ve vysi: [DOPLNIT] Kc
+2. Odmena je splatna do [DOPLNIT] dnu od splneni prikazu.
+
+IV. Lhuta pro provedeni
+
+Prikaznik provede prikaz nejpozdeji do [DOPLNIT].
+
+V. Prava a povinnosti
+
+1. Prikaznik je povinen jednat osobne a peclive.
+2. Prikaznik je povinen ridit se pokyny prikazce.
+3. Prikaznik je povinen informovat prikazce o prubehu.
+4. Prikazce je povinen poskytnout potrebnou soucinnost.
+
+VI. Ukonceni smlouvy
+
+1. Prikazce muze prikaz kdykoliv odvolat.
+2. Prikaznik muze prikaz vypovedet s primerenou vypovedi dobou.
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+_____________________          _____________________
+      Prikazce                       Prikaznik`
+};
+
+templates['smlouva-o-spolupraci'] = {
+    title: 'Smlouva o spolupraci',
+    content: `SMLOUVA O SPOLUPRACI
+uzavrena dle § 1746 odst. 2 zakona c. 89/2012 Sb., obcanskeho zakoniku
+
+I. Smluvni strany
+
+Partner A:
+Nazev: [DOPLNIT]
+ICO: [DOPLNIT]
+Sidlo: [DOPLNIT]
+Zastoupeny: [DOPLNIT]
+
+Partner B:
+Nazev: [DOPLNIT]
+ICO: [DOPLNIT]
+Sidlo: [DOPLNIT]
+Zastoupeny: [DOPLNIT]
+
+II. Predmet smlouvy
+
+1. Smluvni strany se dohodly na spolupraci v oblasti:
+   [DOPLNIT OBLAST SPOLUPRACE]
+
+2. Cilem spoluprace je: [DOPLNIT CIL]
+
+III. Rozsah spoluprace
+
+Partner A se zavazuje:
+- [DOPLNIT POVINNOSTI]
+
+Partner B se zavazuje:
+- [DOPLNIT POVINNOSTI]
+
+IV. Financni podminky
+
+1. Odmena/podil: [DOPLNIT]
+2. Naklady nese: [DOPLNIT]
+
+V. Doba trvani
+
+Tato smlouva se uzavira na dobu:
+[ ] urcitou od [DOPLNIT] do [DOPLNIT]
+[ ] neurcitou s ucinnosti od [DOPLNIT]
+
+VI. Ukonceni spoluprace
+
+1. Dohodou smluvnich stran.
+2. Vypovedi s [DOPLNIT] mesicni vypovedi dobou.
+
+VII. Duverna ustanoveni
+
+Strany se zavazuji zachovavat mlcenlivost o vsech
+skutecnostech ziskanych pri spolupraci.
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+_____________________          _____________________
+     Partner A                       Partner B`
+};
+
+templates['smlouva-o-pujcce'] = {
+    title: 'Smlouva o zapujcce',
+    content: `SMLOUVA O ZAPUJCCE
+uzavrena dle § 2390 a nasl. zakona c. 89/2012 Sb., obcanskeho zakoniku
+
+I. Smluvni strany
+
+Zapujcitel:
+Jmeno: [DOPLNIT]
+RC: [DOPLNIT]
+Bydliste: [DOPLNIT]
+
+Vydluzitel:
+Jmeno: [DOPLNIT]
+RC: [DOPLNIT]
+Bydliste: [DOPLNIT]
+
+II. Predmet smlouvy
+
+1. Zapujcitel pujcuje vydluziteli penezni castku ve vysi:
+   [DOPLNIT] Kc (slovy: [DOPLNIT] korun ceskych)
+
+2. Castka byla predana:
+   [ ] v hotovosti pri podpisu teto smlouvy
+   [ ] prevodem na ucet c. [DOPLNIT]
+
+III. Urok
+
+1. Zapujcka je:
+   [ ] bezurocna
+   [ ] urocena urokovou sazbou [DOPLNIT]% rocne
+
+IV. Splatnost
+
+1. Vydluzitel se zavazuje vratit celou castku nejpozdeji do [DOPLNIT].
+
+2. Splaceni bude provedeno:
+   [ ] jednorrazove
+   [ ] v mesicnich splatkach po [DOPLNIT] Kc
+
+V. Zajisteni
+
+[ ] Zapujcka neni zajistena
+[ ] Zapujcka je zajistena: [DOPLNIT ZPUSOB ZAJISTENI]
+
+VI. Smluvni pokuta
+
+Za prodleni se splacenim sjednava se smluvni pokuta ve vysi
+[DOPLNIT]% z dluzne castky za kazdy den prodleni.
+
+VII. Zaverecna ustanoveni
+
+Smlouva je vyhotovena ve dvou stejnopisech.
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+_____________________          _____________________
+    Zapujcitel                      Vydluzitel`
+};
+
+templates['zalohova-faktura'] = {
+    title: 'Zalohova faktura',
+    content: `                    ZALOHOVA FAKTURA (PROFORMA)
+                    ============================
+
+Cislo: [DOPLNIT]
+Datum vystaveni: [DOPLNIT]
+Datum splatnosti: [DOPLNIT]
+
+DODAVATEL:                              ODBERATEL:
+[DOPLNIT NAZEV]                         [DOPLNIT NAZEV]
+[DOPLNIT ADRESA]                        [DOPLNIT ADRESA]
+ICO: [DOPLNIT]                          ICO: [DOPLNIT]
+DIC: [DOPLNIT]                          DIC: [DOPLNIT]
+
+Bankovni spojeni: [DOPLNIT]
+Cislo uctu: [DOPLNIT]
+Variabilni symbol: [DOPLNIT]
+
+===================================================================
+Popis                                              Castka
+===================================================================
+Zaloha na: [DOPLNIT POPIS ZBOZI/SLUZBY]           [DOPLNIT] Kc
+
+-------------------------------------------------------------------
+CELKEM K UHRADE:                                   [DOPLNIT] Kc
+===================================================================
+
+Upozorneni:
+Toto neni danovy doklad. Danovy doklad bude vystaven
+po uhrade zalohy a dodani zbozi/sluzby.
+
+Vystavil: [DOPLNIT]`
+};
+
+templates['dobropis'] = {
+    title: 'Dobropis',
+    content: `                    DOBROPIS - OPRAVNY DANOVY DOKLAD
+                    =================================
+
+Cislo dobropisu: [DOPLNIT]
+Datum vystaveni: [DOPLNIT]
+Puvodni faktura c.: [DOPLNIT]
+Datum puvodni faktury: [DOPLNIT]
+
+DODAVATEL:                              ODBERATEL:
+[DOPLNIT NAZEV]                         [DOPLNIT NAZEV]
+[DOPLNIT ADRESA]                        [DOPLNIT ADRESA]
+ICO: [DOPLNIT]                          ICO: [DOPLNIT]
+DIC: CZ[DOPLNIT]                        DIC: CZ[DOPLNIT]
+
+===================================================================
+Duvod vystaveni dobropisu:
+[DOPLNIT DUVOD - napr. vraceni zbozi, sleva, oprava chyby]
+===================================================================
+
+Popis                          Mnozstvi    Cena/ks    Celkem
+-------------------------------------------------------------------
+[DOPLNIT POLOZKU]              [x]         [x] Kc     -[x] Kc
+
+-------------------------------------------------------------------
+Zaklad DPH 21%:                                       -[DOPLNIT] Kc
+DPH 21%:                                              -[DOPLNIT] Kc
+-------------------------------------------------------------------
+CELKEM K VRACENI:                                     -[DOPLNIT] Kc
+===================================================================
+
+Castka bude vracena:
+[ ] na ucet c.: [DOPLNIT]
+[ ] zapoctenim proti budoucim pohledavkam
+[ ] v hotovosti
+
+Vystavil: [DOPLNIT]                Datum: [DOPLNIT]`
+};
+
+templates['zadost-stavebni'] = {
+    title: 'Zadost o stavebni povoleni',
+    content: `                    ZADOST O STAVEBNI POVOLENI
+                    ===========================
+
+Mestsky/Obecni urad [DOPLNIT]
+Odbor vystavby
+[DOPLNIT ADRESA]
+
+
+Zadatel:
+Jmeno a prijmeni: [DOPLNIT]
+Datum narozeni: [DOPLNIT]
+Adresa: [DOPLNIT]
+Telefon: [DOPLNIT]
+E-mail: [DOPLNIT]
+
+
+Vec: Zadost o vydani stavebniho povoleni
+
+Na zaklade zakona c. 183/2006 Sb., o uzemnim planovani a stavebnim
+radu (stavebni zakon), zadam o vydani stavebniho povoleni pro stavbu:
+
+Nazev stavby: [DOPLNIT]
+Misto stavby: [DOPLNIT ADRESA/PARCELA]
+Katastralni uzemi: [DOPLNIT]
+Parcelni cislo: [DOPLNIT]
+
+Popis stavby:
+[DOPLNIT STRUCNY POPIS STAVBY]
+
+Predpokladany termin zahajeni: [DOPLNIT]
+Predpokladany termin dokonceni: [DOPLNIT]
+
+Prilohy:
+[ ] Projektova dokumentace (2x)
+[ ] Doklad o vlastnictvi pozemku
+[ ] Situacni vykresy
+[ ] Stanoviska dotcenych organu
+[ ] Souhlasy sousedu
+
+Prohlasuji, ze vsechny udaje jsou pravdive.
+
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+                              _____________________
+                                    podpis`
+};
+
+templates['zadost-zivnost'] = {
+    title: 'Ohlaseni zivnosti',
+    content: `                    JEDNOTNY REGISTRACNI FORMULAR
+                    OHLASENI ZIVNOSTI
+                    ====================
+
+Zivnostensky urad [DOPLNIT]
+[DOPLNIT ADRESA]
+
+
+I. Udaje o fyzicke osobe
+
+Jmeno a prijmeni: [DOPLNIT]
+Rodne prijmeni: [DOPLNIT]
+Datum narozeni: [DOPLNIT]
+Misto narozeni: [DOPLNIT]
+Rodne cislo: [DOPLNIT]
+Statni obcanstvi: [DOPLNIT]
+
+Adresa trvaleho pobytu:
+Ulice: [DOPLNIT]
+Cislo popisne: [DOPLNIT]
+Obec: [DOPLNIT]
+PSC: [DOPLNIT]
+
+II. Udaje o zivnosti
+
+Predmet podnikani: [DOPLNIT]
+
+Druh zivnosti:
+[ ] Volna
+[ ] Remeslna
+[ ] Vazana
+[ ] Koncesovana
+
+Sidlo: [DOPLNIT]
+
+Provozovna: [DOPLNIT ADRESU NEBO "BEZ PROVOZOVNY"]
+
+III. Udaje o odpoved. zastupcich (pokud se vyzaduje)
+
+Jmeno: [DOPLNIT]
+Vztah k podnikateli: [DOPLNIT]
+
+IV. Prilohy
+
+[ ] Doklad o odborne zpusobilosti
+[ ] Doklad o bezuhonnosti (pouze cizinci)
+[ ] Souhlas vlastnika provozovny
+[ ] Doklad o zaplaceni spravniho poplatku (1000 Kc)
+
+
+V [DOPLNIT] dne [DOPLNIT]
+
+
+                              _____________________
+                                    podpis`
+};
+
+templates['gdpr-policy'] = {
+    title: 'Zasady ochrany osobnich udaju',
+    content: `ZASADY OCHRANY OSOBNICH UDAJU
+==============================
+
+Spravce osobnich udaju:
+[DOPLNIT NAZEV SPOLECNOSTI]
+ICO: [DOPLNIT]
+Sidlo: [DOPLNIT]
+E-mail: [DOPLNIT]
+
+1. ZAKLADNI USTANOVENI
+
+Tyto zasady upravuji zpracovani osobnich udaju v souladu s Narizenim
+Evropskeho parlamentu a Rady (EU) 2016/679 (GDPR).
+
+2. JAKE UDAJE SHROMAZDUJEME
+
+Muzeme shromazdovat nasledujici osobni udaje:
+- Identifikacni udaje (jmeno, prijmeni)
+- Kontaktni udaje (e-mail, telefon, adresa)
+- Fakturacni udaje (ICO, DIC, bankovni spojeni)
+- Udaje o objednavkach a transakci
+
+3. UCELY ZPRACOVANI
+
+Osobni udaje zpracovavame pro tyto ucely:
+- Plneni smlouvy a poskytovani sluzeb
+- Komunikace se zakazniky
+- Plneni pravnich povinnosti
+- Oprávnene zajmy spravce
+
+4. PRAVNI ZAKLAD
+
+Zpracovani je zalozeno na:
+- Plneni smlouvy (cl. 6 odst. 1 pism. b GDPR)
+- Pravni povinnosti (cl. 6 odst. 1 pism. c GDPR)
+- Opravnenych zajmech (cl. 6 odst. 1 pism. f GDPR)
+- Souhlasu (cl. 6 odst. 1 pism. a GDPR)
+
+5. DOBA UCHOVAVANI
+
+Osobni udaje uchvavame po dobu:
+- Trvani smluvniho vztahu
+- [DOPLNIT] let po ukonceni spoluprace
+- Dle pozadavku pravnich predpisu
+
+6. PRAVA SUBJEKTU UDAJU
+
+Mate pravo na:
+- Pristup k osobnim udajum
+- Opravu nepresnych udaju
+- Vymaz udaju
+- Omezeni zpracovani
+- Prenositelnost udaju
+- Podani namitky
+
+7. KONTAKT
+
+Pro uplatneni prav kontaktujte:
+[DOPLNIT E-MAIL]
+
+Posledni aktualizace: [DOPLNIT DATUM]`
+};
+
+templates['podnikatelsky-plan'] = {
+    title: 'Podnikatelsky plan',
+    content: `                    PODNIKATELSKY PLAN
+                    ==================
+
+1. TITULNI STRANA
+
+Nazev projektu: [DOPLNIT]
+Jmeno podnikatele: [DOPLNIT]
+Sidlo: [DOPLNIT]
+Kontakt: [DOPLNIT]
+Datum: [DOPLNIT]
+
+
+2. EXEKUTIVNI SOUHRN
+
+[DOPLNIT STRUCNY PREHLED PROJEKTU - 1 ODSTAVEC]
+
+
+3. POPIS PODNIKU
+
+Pravni forma: [DOPLNIT - OSVC, s.r.o., a.s., atd.]
+Predmet podnikani: [DOPLNIT]
+Mise: [DOPLNIT]
+Vize: [DOPLNIT]
+
+
+4. PRODUKTY A SLUZBY
+
+Nabizene produkty/sluzby:
+- [DOPLNIT]
+
+Konkurencni vyhody:
+- [DOPLNIT]
+
+
+5. ANALYZA TRHU
+
+Cilovy trh: [DOPLNIT]
+Velikost trhu: [DOPLNIT]
+Cilovy zakaznik: [DOPLNIT]
+
+Hlavni konkurenti:
+- [DOPLNIT]
+
+
+6. MARKETINGOVA STRATEGIE
+
+Cenova politika: [DOPLNIT]
+Distribucni kanaly: [DOPLNIT]
+Propagace: [DOPLNIT]
+
+
+7. ORGANIZACNI STRUKTURA
+
+Majitel/Jednatel: [DOPLNIT]
+Zamestnanci: [DOPLNIT POCET]
+Klicove pozice: [DOPLNIT]
+
+
+8. FINANCNI PLAN
+
+Pocatecni investice: [DOPLNIT] Kc
+Zdroje financovani:
+- Vlastni zdroje: [DOPLNIT] Kc
+- Cizi zdroje: [DOPLNIT] Kc
+
+Predpokladane trzby (1. rok): [DOPLNIT] Kc
+Predpokladane naklady (1. rok): [DOPLNIT] Kc
+Predpokladany zisk (1. rok): [DOPLNIT] Kc
+
+Bod zvratu: [DOPLNIT]
+
+
+9. RIZIKA A JEJICH MINIMALIZACE
+
+Identifikovana rizika:
+- [DOPLNIT]
+
+Opatreni:
+- [DOPLNIT]
+
+
+10. CASOVY HARMONOGRAM
+
+[DOPLNIT KLICOVE MILNIKY]
+
+
+11. PRILOHY
+
+- Zivotopis podnikatele
+- Financni projekce
+- Reference`
+};
 
 // ===== Theme Toggle =====
 function initTheme() {
@@ -767,24 +1316,43 @@ function closePreviewModal() {
 }
 
 // ===== Download Template =====
+// List of templates available as DOCX
+const docxTemplates = [
+    'kupni-smlouva', 'najemni-smlouva', 'smlouva-o-dilo', 'pracovni-smlouva',
+    'vypoved', 'dpp', 'dpc', 'faktura-dph', 'faktura-bez-dph', 'nda',
+    'zadost-gdpr', 'zadost-informace', 'smlouva-o-spolupraci',
+    'smlouva-o-pujcce', 'prikazni-smlouva', 'zalohova-faktura', 'dobropis',
+    'zadost-stavebni', 'zadost-zivnost', 'obchodni-podminky', 'gdpr-policy',
+    'podnikatelsky-plan'
+];
+
 function downloadTemplate(templateId) {
     const template = templates[templateId];
     if (!template) return;
 
-    // Create blob with UTF-8 BOM for proper Czech characters
-    const BOM = '\uFEFF';
-    const content = BOM + template.content;
-    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-
-    // Create download link
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${templateId}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Check if DOCX version exists
+    if (docxTemplates.includes(templateId)) {
+        // Download DOCX file
+        const a = document.createElement('a');
+        a.href = `sablony-docx/${templateId}.docx`;
+        a.download = `${templateId}.docx`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } else {
+        // Fallback to text download
+        const BOM = '\uFEFF';
+        const content = BOM + template.content;
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${templateId}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
 }
 
 // ===== Event Listeners =====

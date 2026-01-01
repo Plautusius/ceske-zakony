@@ -9,7 +9,15 @@ const lawsData = [
         published: "2025-01-15",
         effective: "2025-07-01",
         description: "Zákon upravuje podmínky pro poskytování služeb elektronických komunikací, práva a povinnosti podnikatelů v elektronických komunikacích a práva uživatelů těchto služeb.",
-        keywords: ["elektronické komunikace", "telekomunikace", "internet", "digitalizace"]
+        keywords: ["elektronické komunikace", "telekomunikace", "internet", "digitalizace"],
+        keyPoints: [
+            "Povinnost operátorů zajistit minimální rychlost internetu 30 Mbit/s",
+            "Právo na přenositelnost čísla do 1 pracovního dne",
+            "Maximální délka smlouvy na dobu určitou 24 měsíců",
+            "Povinná transparentnost cen a služeb",
+            "Ochrana spotřebitele před nevyžádanými službami"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/23"
     },
     {
         id: 2,
@@ -20,7 +28,15 @@ const lawsData = [
         published: "2025-02-01",
         effective: "2025-02-15",
         description: "Zákon stanoví pravidla pro digitální finanční služby, kryptoaktiva a regulaci fintech společností v České republice.",
-        keywords: ["finance", "digitalizace", "kryptoměny", "fintech"]
+        keywords: ["finance", "digitalizace", "kryptoměny", "fintech"],
+        keyPoints: [
+            "Licencování poskytovatelů služeb kryptoaktiv",
+            "Ochrana investorů do kryptoměn",
+            "Pravidla pro crowdfunding platformy",
+            "Regulace robo-advisorů a automatizovaných investičních služeb",
+            "Povinnosti AML/KYC pro digitální finanční služby"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/31"
     },
     {
         id: 3,
@@ -31,7 +47,15 @@ const lawsData = [
         published: "2025-02-10",
         effective: "2025-02-19",
         description: "Zákon zřizuje Národní rozvojovou banku a stanoví její působnost při podpoře investic a rozvoje podnikání v ČR.",
-        keywords: ["banka", "rozvoj", "investice", "podnikání"]
+        keywords: ["banka", "rozvoj", "investice", "podnikání"],
+        keyPoints: [
+            "Zřízení Národní rozvojové banky jako státní finanční instituce",
+            "Podpora malých a středních podniků formou úvěrů",
+            "Financování infrastrukturních projektů",
+            "Garance pro exportéry a investory",
+            "Spolupráce s Evropskou investiční bankou"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/34"
     },
     {
         id: 4,
@@ -42,7 +66,15 @@ const lawsData = [
         published: "2025-02-20",
         effective: "2025-03-01",
         description: "Novela zákona o sociálních službách přináší změny v poskytování a financování sociálních služeb.",
-        keywords: ["sociální služby", "péče", "zdravotnictví"]
+        keywords: ["sociální služby", "péče", "zdravotnictví"],
+        keyPoints: [
+            "Zvýšení příspěvku na péči o 10%",
+            "Zjednodušení registrace poskytovatelů sociálních služeb",
+            "Nové standardy kvality péče",
+            "Podpora neformálních pečovatelů",
+            "Rozšíření terénních služeb"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/38"
     },
     {
         id: 5,
@@ -53,7 +85,15 @@ const lawsData = [
         published: "2025-02-25",
         effective: "2025-03-01",
         description: "Novela upravuje podmínky akreditace studijních programů a financování vysokých škol.",
-        keywords: ["vysoké školy", "vzdělávání", "akreditace"]
+        keywords: ["vysoké školy", "vzdělávání", "akreditace"],
+        keyPoints: [
+            "Prodloužení akreditací studijních programů na 10 let",
+            "Nový model výkonového financování",
+            "Podpora mezinárodní spolupráce a mobilit",
+            "Zjednodušení uznávání zahraničního vzdělání",
+            "Stipendijní programy pro talentované studenty"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/52"
     },
     {
         id: 6,
@@ -64,7 +104,15 @@ const lawsData = [
         published: "2025-03-15",
         effective: "2025-07-01",
         description: "Rozšíření pravomocí veřejného ochránce práv a posílení ochrany základních práv občanů.",
-        keywords: ["ombudsman", "ochrana práv", "lidská práva"]
+        keywords: ["ombudsman", "ochrana práv", "lidská práva"],
+        keyPoints: [
+            "Rozšíření pravomocí na soukromé subjekty poskytující veřejné služby",
+            "Možnost podávat návrhy k Ústavnímu soudu",
+            "Zřízení dětského ombudsmana",
+            "Povinnost státních orgánů reagovat do 30 dnů",
+            "Veřejný přístup k výročním zprávám"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/77"
     },
     {
         id: 7,
@@ -75,7 +123,15 @@ const lawsData = [
         published: "2025-03-15",
         effective: "2025-07-01",
         description: "Komplexní zákon upravující prevenci a potírání domácího násilí, včetně posílení ochrany obětí.",
-        keywords: ["domácí násilí", "ochrana obětí", "prevence"]
+        keywords: ["domácí násilí", "ochrana obětí", "prevence"],
+        keyPoints: [
+            "Rozšíření definice domácího násilí o psychické a ekonomické násilí",
+            "Zákaz přiblížení násilníka na 500 metrů",
+            "Bezplatná právní pomoc obětem",
+            "Povinné vzdělávání policistů a soudců",
+            "Intervenční centra v každém krajském městě"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/78"
     },
     {
         id: 8,
@@ -86,7 +142,15 @@ const lawsData = [
         published: "2025-04-10",
         effective: "2025-05-01",
         description: "Změny ve struktuře a financování veřejnoprávních médií.",
-        keywords: ["ČT", "ČRo", "média", "veřejnoprávní"]
+        keywords: ["ČT", "ČRo", "média", "veřejnoprávní"],
+        keyPoints: [
+            "Valorizace koncesionářských poplatků podle inflace",
+            "Nové složení Rad ČT a ČRo",
+            "Posílení nezávislosti veřejnoprávních médií",
+            "Povinnost vysílat minimálně 40% české tvorby",
+            "Transparentnost hospodaření"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/119"
     },
     {
         id: 9,
@@ -97,7 +161,15 @@ const lawsData = [
         published: "2025-05-20",
         effective: "2025-10-01",
         description: "Nový systém dávek státní sociální pomoci pro nízkopříjmové domácnosti.",
-        keywords: ["sociální dávky", "pomoc", "sociální politika"]
+        keywords: ["sociální dávky", "pomoc", "sociální politika"],
+        keyPoints: [
+            "Sloučení více dávek do jedné - Dávka solidarity",
+            "Automatický nárok při splnění podmínek",
+            "Digitální žádost přes Portál občana",
+            "Zvýhodnění pracujících nízkopříjmových",
+            "Pravidelná valorizace podle životního minima"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/151"
     },
     {
         id: 10,
@@ -108,7 +180,15 @@ const lawsData = [
         published: "2025-06-01",
         effective: "2025-07-01",
         description: "Zákon stanoví pravidla pro transparentní lobbování a registr lobbistů.",
-        keywords: ["lobbování", "transparentnost", "politika"]
+        keywords: ["lobbování", "transparentnost", "politika"],
+        keyPoints: [
+            "Povinná registrace lobbistů v centrálním registru",
+            "Zveřejňování schůzek s veřejnými činiteli",
+            "Cooling-off period 2 roky pro bývalé politiky",
+            "Sankce za neregistrované lobbování až 1 mil. Kč",
+            "Etický kodex lobbisty"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/168"
     },
     {
         id: 11,
@@ -119,7 +199,15 @@ const lawsData = [
         published: "2025-03-20",
         effective: "2025-04-01",
         description: "Vyhláška stanoví podrobnosti o nakládání s osobními údaji pacientů a zdravotnickou dokumentací.",
-        keywords: ["GDPR", "zdravotnictví", "osobní údaje"]
+        keywords: ["GDPR", "zdravotnictví", "osobní údaje"],
+        keyPoints: [
+            "Elektronická zdravotnická dokumentace - bezpečnostní standardy",
+            "Pravidla pro sdílení údajů mezi poskytovateli",
+            "Práva pacientů na přístup k dokumentaci",
+            "Povinnost šifrování citlivých údajů",
+            "Doba uchovávání zdravotnické dokumentace 10 let"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/89"
     },
     {
         id: 12,
@@ -130,7 +218,15 @@ const lawsData = [
         published: "2025-03-25",
         effective: "2025-01-01",
         description: "Stanovení výše minimální mzdy a nejnižších úrovní zaručené mzdy pro rok 2025.",
-        keywords: ["minimální mzda", "zaručená mzda", "práce"]
+        keywords: ["minimální mzda", "zaručená mzda", "práce"],
+        keyPoints: [
+            "Minimální mzda 21 900 Kč měsíčně (131,50 Kč/hod)",
+            "8 skupin zaručené mzdy dle náročnosti práce",
+            "Valorizace o 8,5% oproti roku 2024",
+            "Platí pro všechny zaměstnance v ČR",
+            "Sankce za nedodržení až 2 mil. Kč"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/95"
     },
     {
         id: 13,
@@ -141,7 +237,15 @@ const lawsData = [
         published: "2025-04-05",
         effective: "2025-05-01",
         description: "Nové požadavky na energetickou náročnost budov a povinnost energetických štítků.",
-        keywords: ["energie", "budovy", "štítkování", "úspory"]
+        keywords: ["energie", "budovy", "štítkování", "úspory"],
+        keyPoints: [
+            "Povinný energetický štítek při prodeji a pronájmu",
+            "Nové energetické třídy A+ až G",
+            "Požadavky na téměř nulovou spotřebu u novostaveb",
+            "Platnost průkazu 10 let",
+            "Sankce za chybějící štítek až 100 000 Kč"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/112"
     },
     {
         id: 14,
@@ -152,7 +256,15 @@ const lawsData = [
         published: "2025-04-15",
         effective: "2025-04-15",
         description: "Nález Ústavního soudu ve věci zrušení části zákona o elektronických komunikacích.",
-        keywords: ["Ústavní soud", "nález", "zrušení"]
+        keywords: ["Ústavní soud", "nález", "zrušení"],
+        keyPoints: [
+            "Zrušeno ustanovení o plošném sledování komunikací",
+            "Ochrana soukromí jako základní právo",
+            "Povinnost individuálního soudního příkazu",
+            "Neústavnost preventivního uchovávání dat",
+            "Lhůta 12 měsíců pro přijetí nové úpravy"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/125"
     },
     {
         id: 15,
@@ -163,7 +275,15 @@ const lawsData = [
         published: "2025-05-01",
         effective: "2025-01-01",
         description: "Novelizace účetních předpisů pro podnikatele v souladu s mezinárodními standardy.",
-        keywords: ["účetnictví", "podnikatelé", "IFRS"]
+        keywords: ["účetnictví", "podnikatelé", "IFRS"],
+        keyPoints: [
+            "Harmonizace s mezinárodními standardy IFRS",
+            "Nové požadavky na reporting udržitelnosti",
+            "Elektronické účetní doklady jako standard",
+            "Povinnost archivace 10 let",
+            "Zjednodušení pro mikro účetní jednotky"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/142"
     },
     {
         id: 16,
@@ -174,7 +294,15 @@ const lawsData = [
         published: "2025-05-25",
         effective: "2025-09-01",
         description: "Komplexní úprava kybernetické bezpečnosti kritické infrastruktury a digitálních služeb.",
-        keywords: ["kybernetická bezpečnost", "IT", "kritická infrastruktura"]
+        keywords: ["kybernetická bezpečnost", "IT", "kritická infrastruktura"],
+        keyPoints: [
+            "Povinný audit kybernetické bezpečnosti pro kritickou infrastrukturu",
+            "Hlášení bezpečnostních incidentů do 24 hodin",
+            "Certifikace produktů a služeb",
+            "Zřízení Národního centra kybernetické bezpečnosti",
+            "Sankce za porušení až 10 mil. Kč nebo 2% obratu"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/156"
     },
     {
         id: 17,
@@ -185,7 +313,15 @@ const lawsData = [
         published: "2025-06-15",
         effective: "2025-09-01",
         description: "Zákon o státní podpoře bydlení včetně dotačních programů pro mladé rodiny.",
-        keywords: ["bydlení", "dotace", "podpora"]
+        keywords: ["bydlení", "dotace", "podpora"],
+        keyPoints: [
+            "Dotace na pořízení první nemovitosti až 500 000 Kč",
+            "Zvýhodněné úvěry se státní zárukou",
+            "Program dostupného nájemního bydlení",
+            "Podpora družstevního bydlení",
+            "Příspěvek na bydlení pro nízkopříjmové domácnosti"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/178"
     },
     {
         id: 18,
@@ -196,7 +332,15 @@ const lawsData = [
         published: "2025-06-20",
         effective: "2025-08-01",
         description: "Zpřísnění podmínek pro vynětí zemědělské půdy ze zemědělského půdního fondu.",
-        keywords: ["zemědělství", "půda", "ochrana"]
+        keywords: ["zemědělství", "půda", "ochrana"],
+        keyPoints: [
+            "Zákaz vynětí nejkvalitnější orné půdy (bonita 1-2)",
+            "Povinnost rekultivace brownfieldů před novými zábory",
+            "Vyšší poplatky za odnětí půdy (až 5x)",
+            "Podpora obnovy zanedbaných pozemků",
+            "Evidence využití zemědělské půdy"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/185"
     },
     {
         id: 19,
@@ -207,7 +351,15 @@ const lawsData = [
         published: "2025-07-01",
         effective: "2025-01-01",
         description: "Zákon stanoví pravidla pro třídění, recyklaci a opětovné využití odpadů.",
-        keywords: ["odpady", "recyklace", "ekologie"]
+        keywords: ["odpady", "recyklace", "ekologie"],
+        keyPoints: [
+            "Povinnost třídit odpady pro všechny domácnosti",
+            "Zákaz skládkování recyklovatelných odpadů od 2030",
+            "Cíl recyklace 65% komunálních odpadů",
+            "Rozšířená odpovědnost výrobců obalů",
+            "Zálohový systém na PET lahve a plechovky"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/201"
     },
     {
         id: 20,
@@ -218,7 +370,15 @@ const lawsData = [
         published: "2025-07-15",
         effective: "2025-10-01",
         description: "Aktualizace technických norem pro výstavbu bytových a nebytových budov.",
-        keywords: ["stavby", "normy", "stavebnictví"]
+        keywords: ["stavby", "normy", "stavebnictví"],
+        keyPoints: [
+            "Minimální plocha obytné místnosti 8 m²",
+            "Povinná bezbariérovost nových bytových domů",
+            "Požadavky na zvukovou izolaci",
+            "Normy pro požární bezpečnost",
+            "Povinná nabíjecí infrastruktura pro elektromobily"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/215"
     },
     {
         id: 21,
@@ -229,7 +389,15 @@ const lawsData = [
         published: "2025-08-01",
         effective: "2025-01-01",
         description: "Rozšíření digitálních služeb státní správy a povinná elektronická komunikace s úřady.",
-        keywords: ["digitalizace", "eGovernment", "úřady"]
+        keywords: ["digitalizace", "eGovernment", "úřady"],
+        keyPoints: [
+            "Právo na digitální komunikaci s úřady",
+            "Povinnost úřadů přijímat elektronická podání",
+            "Jednotný portál občana pro všechny služby",
+            "Automatické předvyplňování formulářů z registrů",
+            "Elektronická identita jako standard"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/228"
     },
     {
         id: 22,
@@ -240,7 +408,15 @@ const lawsData = [
         published: "2025-08-20",
         effective: "2025-10-01",
         description: "Úprava pracovní doby a povinných přestávek řidičů nákladní a osobní dopravy.",
-        keywords: ["doprava", "řidiči", "pracovní doba"]
+        keywords: ["doprava", "řidiči", "pracovní doba"],
+        keyPoints: [
+            "Maximální doba řízení 9 hodin denně (2x týdně 10 hodin)",
+            "Povinná přestávka 45 minut po 4,5 hodinách",
+            "Minimální denní odpočinek 11 hodin",
+            "Digitální tachografy povinné pro všechna vozidla nad 3,5t",
+            "Kontroly dodržování pomocí GPS"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/245"
     },
     {
         id: 23,
@@ -251,7 +427,15 @@ const lawsData = [
         published: "2025-09-05",
         effective: "2025-01-01",
         description: "Dotační program a daňové úlevy pro nákup elektromobilů a budování nabíjecí infrastruktury.",
-        keywords: ["elektromobily", "dotace", "doprava"]
+        keywords: ["elektromobily", "dotace", "doprava"],
+        keyPoints: [
+            "Dotace až 200 000 Kč na nový elektromobil",
+            "Osvobození od silniční daně do roku 2030",
+            "Snížená sazba DPH 10% na nabíjení",
+            "Povinnost instalace nabíječek u nových budov",
+            "Podpora budování veřejné nabíjecí sítě"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/267"
     },
     {
         id: 24,
@@ -262,7 +446,15 @@ const lawsData = [
         published: "2025-09-25",
         effective: "2025-12-01",
         description: "Nové hygienické a jakostní požadavky na výrobu a distribuci potravin.",
-        keywords: ["potraviny", "hygiena", "kvalita"]
+        keywords: ["potraviny", "hygiena", "kvalita"],
+        keyPoints: [
+            "Povinné označení země původu hlavní složky",
+            "Přísnější limity pro pesticidy a kontaminanty",
+            "Nové požadavky na alergeny na etiketách",
+            "Regulace marketingu nezdravých potravin dětem",
+            "Nutriscore povinný na obalech od 2027"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/289"
     },
     {
         id: 25,
@@ -273,7 +465,15 @@ const lawsData = [
         published: "2025-10-15",
         effective: "2025-01-01",
         description: "Komplexní daňová reforma včetně změn v dani z příjmů fyzických a právnických osob.",
-        keywords: ["daně", "reforma", "příjmy"]
+        keywords: ["daně", "reforma", "příjmy"],
+        keyPoints: [
+            "Zvýšení slevy na poplatníka na 35 000 Kč",
+            "Sazba DPFO 15% do 1,5 mil. Kč, 23% nad",
+            "Snížení sazby DPPO na 19% pro malé firmy",
+            "Zrušení superhrubé mzdy - trvalé",
+            "Nové odpočty na vzdělávání a zdraví"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/312"
     },
     {
         id: 26,
@@ -284,7 +484,15 @@ const lawsData = [
         published: "2025-11-01",
         effective: "2025-01-01",
         description: "Novelizace zákona o veřejných zakázkách s důrazem na transparentnost a elektronizaci.",
-        keywords: ["veřejné zakázky", "soutěže", "transparentnost"]
+        keywords: ["veřejné zakázky", "soutěže", "transparentnost"],
+        keyPoints: [
+            "Povinná elektronická forma všech zakázek",
+            "Automatické propojení s rejstříky",
+            "Zvýhodnění environmentálních kritérií",
+            "Zjednodušení pro zakázky do 2 mil. Kč",
+            "Blacklist nespolehlivých dodavatelů"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/335"
     },
     {
         id: 27,
@@ -295,7 +503,15 @@ const lawsData = [
         published: "2025-11-20",
         effective: "2025-01-01",
         description: "Nové požadavky na vzdělávání a celoživotní vzdělávání lékařů a zdravotních sester.",
-        keywords: ["zdravotnictví", "vzdělávání", "lékaři"]
+        keywords: ["zdravotnictví", "vzdělávání", "lékaři"],
+        keyPoints: [
+            "Povinné celoživotní vzdělávání 50 kreditů/rok",
+            "Nové specializační obory",
+            "E-learningové kurzy uznávané",
+            "Povinné stáže v zahraničí pro specialisty",
+            "Simulační výuka povinná"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/358"
     },
     {
         id: 28,
@@ -306,7 +522,15 @@ const lawsData = [
         published: "2025-12-01",
         effective: "2025-01-01",
         description: "Zákon o státním rozpočtu České republiky na rok 2026.",
-        keywords: ["rozpočet", "státní finance", "výdaje"]
+        keywords: ["rozpočet", "státní finance", "výdaje"],
+        keyPoints: [
+            "Celkové příjmy 2,1 bilionu Kč",
+            "Celkové výdaje 2,35 bilionu Kč",
+            "Deficit 250 miliard Kč",
+            "Priority: vzdělávání, zdravotnictví, obrana",
+            "Investice do infrastruktury 180 mld. Kč"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/375"
     },
     {
         id: 29,
@@ -317,7 +541,15 @@ const lawsData = [
         published: "2025-09-26",
         effective: "2025-12-01",
         description: "Bezpečnostní pravidla pro orgány veřejné správy využívající služby poskytovatelů cloud computingu.",
-        keywords: ["cloud", "bezpečnost", "veřejná správa"]
+        keywords: ["cloud", "bezpečnost", "veřejná správa"],
+        keyPoints: [
+            "Klasifikace dat dle citlivosti",
+            "Povinnost ukládání dat v EU",
+            "Certifikace poskytovatelů cloudu",
+            "Pravidelné bezpečnostní audity",
+            "Plán kontinuity a zálohy"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/412"
     },
     {
         id: 30,
@@ -328,7 +560,15 @@ const lawsData = [
         published: "2025-12-10",
         effective: "2025-01-01",
         description: "Valorizace důchodů a stanovení výše základní výměry důchodu pro rok 2026.",
-        keywords: ["důchody", "valorizace", "sociální zabezpečení"]
+        keywords: ["důchody", "valorizace", "sociální zabezpečení"],
+        keyPoints: [
+            "Zvýšení průměrného důchodu o 5,2%",
+            "Základní výměra důchodu 4 400 Kč",
+            "Mimořádný příspěvek 2 000 Kč pro důchody pod 15 000 Kč",
+            "Valorizace dle kombinace inflace a růstu mezd",
+            "Zachování 13. důchodu"
+        ],
+        eSbirkaUrl: "https://www.e-sbirka.cz/sb/2025/425"
     }
 ];
 
@@ -535,6 +775,19 @@ function openLawModal(lawId) {
     const now = new Date();
     const isEffective = effectiveDate <= now;
 
+    // Generate key points HTML
+    let keyPointsHtml = '';
+    if (law.keyPoints && law.keyPoints.length > 0) {
+        keyPointsHtml = `
+            <div class="key-points-section">
+                <h4 class="key-points-title">Klíčové body předpisu</h4>
+                <ul class="key-points-list">
+                    ${law.keyPoints.map(point => `<li>${point}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
     document.getElementById('modalBody').innerHTML = `
         <div class="modal-info">
             <div class="modal-info-item">
@@ -555,13 +808,14 @@ function openLawModal(lawId) {
             </div>
         </div>
         <p class="modal-description">${law.description}</p>
+        ${keyPointsHtml}
     `;
 
     // Extract year and number for links
     const [num, year] = law.number.split('/');
     const urlNumber = `${num}-${year}`;
 
-    document.getElementById('modalLinkFull').href = `https://www.zakonyprolidi.cz/cs/${year}/${num}`;
+    document.getElementById('modalLinkFull').href = law.eSbirkaUrl || `https://www.zakonyprolidi.cz/cs/${year}/${num}`;
     document.getElementById('modalLinkPdf').href = `https://zakony.gov.cz/cs/${urlNumber}-sb`;
 
     modal.classList.add('active');
