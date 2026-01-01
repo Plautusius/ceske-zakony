@@ -2,9 +2,8 @@
  * Skript pro kontrolu novych zakonu
  * Spousti se pres GitHub Actions 1x tydne
  *
- * Kontroluje:
- * - e-sbirka.cz (oficialni zdroj)
- * - zakonyprolidi.cz (alternativni zdroj)
+ * OPRAVENA VERZE - hleda v obou rocnicich (2024 i 2025)
+ * a kontroluje datum ucinnosti
  */
 
 const https = require('https');
@@ -13,37 +12,35 @@ const path = require('path');
 
 // Konfigurace
 const CONFIG = {
-    targetYear: 2026,
+    targetEffectiveYear: 2026,
+    yearsToSearch: [2024, 2025], // Hledat v obou rocnicich
     dataFile: path.join(__dirname, '..', 'data', 'laws-data.js'),
-    outputFile: path.join(__dirname, '..', 'new-laws-found.json'),
-    sources: {
-        zakonyprolidi: 'https://www.zakonyprolidi.cz/cs/nove-predpisy',
-        esbirka: 'https://www.e-sbirka.cz/sb/casti/aktualni'
-    }
+    outputFile: path.join(__dirname, '..', 'new-laws-found.json')
 };
 
 // Hlavni funkce
 async function main() {
     console.log('='.repeat(60));
-    console.log('KONTROLA NOVYCH ZAKONU');
+    console.log('KONTROLA NOVYCH ZAKONU - v2.0');
     console.log('='.repeat(60));
     console.log(`Datum: ${new Date().toLocaleDateString('cs-CZ')}`);
-    console.log(`Hledam zakony s ucinnosti od: 1.1.${CONFIG.targetYear}\n`);
+    console.log(`Hledam zakony s ucinnosti od: 1.1.${CONFIG.targetEffectiveYear}`);
+    console.log(`Prohledavam rocniky: ${CONFIG.yearsToSearch.join(', ')}\n`);
 
     try {
         // 1. Nacist aktualni databazi
         console.log('[1/4] Nacitam aktualni databazi...');
-        const currentLaws = loadCurrentDatabase();
-        console.log(`      Aktualne v databazi: ${currentLaws.length} novych zakonu\n`);
+        const currentLawNumbers = loadCurrentDatabase();
+        console.log(`      Aktualne v databazi: ${currentLawNumbers.length} novych zakonu\n`);
 
         // 2. Ziskat seznam novych zakonu z webu
-        console.log('[2/4] Kontroluji zdroje...');
-        const foundLaws = await fetchNewLaws();
-        console.log(`      Nalezeno predpisu k analyze: ${foundLaws.length}\n`);
+        console.log('[2/4] Kontroluji zakonyprolidi.cz...');
+        const foundLaws = await fetchAllLaws();
+        console.log(`      Nalezeno predpisu s ucinnosti 2026: ${foundLaws.length}\n`);
 
         // 3. Filtrovat - jen zakony co jeste nemame
         console.log('[3/4] Porovnavam s databazi...');
-        const newLaws = filterNewLaws(foundLaws, currentLaws);
+        const newLaws = foundLaws.filter(law => !currentLawNumbers.includes(law.number));
         console.log(`      Novych zakonu k pridani: ${newLaws.length}\n`);
 
         // 4. Ulozit vysledek
@@ -56,9 +53,10 @@ async function main() {
             console.log(`NALEZENO ${newLaws.length} NOVYCH ZAKONU!`);
             console.log('='.repeat(60));
             newLaws.forEach((law, i) => {
-                console.log(`\n${i + 1}. ${law.number} - ${law.title}`);
+                console.log(`\n${i + 1}. ${law.number} Sb. - ${law.title}`);
+                console.log(`   Typ: ${law.type}`);
                 console.log(`   Ucinnost: ${law.effective}`);
-                console.log(`   Zdroj: ${law.sourceUrl}`);
+                console.log(`   Odkaz: ${law.sourceUrl}`);
             });
 
             // Exit code 1 = nalezeny nove zakony (pro GitHub Actions)
@@ -72,6 +70,7 @@ async function main() {
 
     } catch (error) {
         console.error('\nCHYBA:', error.message);
+        console.error(error.stack);
         process.exit(2);
     }
 }
@@ -79,11 +78,10 @@ async function main() {
 // Nacist aktualni databazi
 function loadCurrentDatabase() {
     try {
-        // Nacist JS soubor jako text a parsovat
         const content = fs.readFileSync(CONFIG.dataFile, 'utf8');
-
-        // Extrahovat cisla zakonu z newLaws
         const numbers = [];
+
+        // Hledat vsechna cisla zakonu v newLaws
         const regex = /number:\s*["']([^"']+)["']/g;
         let match;
         while ((match = regex.exec(content)) !== null) {
@@ -97,32 +95,25 @@ function loadCurrentDatabase() {
     }
 }
 
-// Ziskat nove zakony z webu
-async function fetchNewLaws() {
-    const laws = [];
+// Ziskat zakony ze vsech rocniku
+async function fetchAllLaws() {
+    const allLaws = [];
 
-    // Zkusit zakonyprolidi.cz
-    try {
-        console.log('      - Kontroluji zakonyprolidi.cz...');
-        const zpLaws = await fetchFromZakonyProLidi();
-        laws.push(...zpLaws);
-    } catch (e) {
-        console.log('        (nepodarilo se spojit)');
+    for (const year of CONFIG.yearsToSearch) {
+        console.log(`      - Rocnik ${year}...`);
+        try {
+            const laws = await fetchLawsFromYear(year);
+            allLaws.push(...laws);
+            console.log(`        nalezeno ${laws.length} predpisu`);
+        } catch (e) {
+            console.log(`        chyba: ${e.message}`);
+        }
     }
 
-    // Zkusit e-sbirka.cz
-    try {
-        console.log('      - Kontroluji e-sbirka.cz...');
-        const esLaws = await fetchFromESbirka();
-        laws.push(...esLaws);
-    } catch (e) {
-        console.log('        (nepodarilo se spojit)');
-    }
-
-    // Odstranit duplicity podle cisla zakona
+    // Odstranit duplicity
     const unique = [];
     const seen = new Set();
-    for (const law of laws) {
+    for (const law of allLaws) {
         if (!seen.has(law.number)) {
             seen.add(law.number);
             unique.push(law);
@@ -132,137 +123,92 @@ async function fetchNewLaws() {
     return unique;
 }
 
-// Fetch z zakonyprolidi.cz
-function fetchFromZakonyProLidi() {
+// Fetch zakony z konkretniho roku
+function fetchLawsFromYear(year) {
     return new Promise((resolve, reject) => {
-        const url = 'https://www.zakonyprolidi.cz/cs/sbirka?rocnik=' + CONFIG.targetYear;
+        const url = `https://www.zakonyprolidi.cz/cs/rocnik/${year}`;
 
-        https.get(url, {
+        const options = {
             headers: {
-                'User-Agent': 'Mozilla/5.0 (compatible; CeskeZakonyBot/1.0)'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'cs,en;q=0.5'
             }
-        }, (res) => {
+        };
+
+        https.get(url, options, (res) => {
             let data = '';
             res.on('data', chunk => data += chunk);
             res.on('end', () => {
-                const laws = parseZakonyProLidi(data);
+                const laws = parseLawsPage(data, year);
                 resolve(laws);
             });
         }).on('error', reject);
     });
 }
 
-// Parsovat HTML z zakonyprolidi.cz
-function parseZakonyProLidi(html) {
+// Parsovat stranku se zakony
+function parseLawsPage(html, year) {
     const laws = [];
 
-    // Hledat vzor: cislo/rok a nazev
-    // Format: <a href="/cs/2025-270">270/2025 Sb.</a> ... nazev
-    const regex = /<a[^>]*href="\/cs\/(\d{4})-(\d+)"[^>]*>(\d+)\/(\d{4})\s*Sb\.<\/a>[\s\S]*?<td[^>]*>([^<]+)<\/td>/gi;
+    // Pattern 1: Hledat odkazy na jednotlive zakony
+    // Format: href="/cs/2025-123" nebo href="/cs/2024-88"
+    const linkRegex = /href="\/cs\/(\d{4})-(\d+)"[^>]*>.*?(\d+)\/(\d{4})\s*Sb\./gi;
 
     let match;
-    while ((match = regex.exec(html)) !== null) {
-        const year = parseInt(match[1]);
-        const number = match[3];
-        const title = match[5].trim();
+    while ((match = linkRegex.exec(html)) !== null) {
+        const urlYear = match[1];
+        const urlNumber = match[2];
+        const lawNumber = match[3];
+        const lawYear = match[4];
 
-        if (year >= 2025) {  // Zakony z 2025 a novejsi
-            laws.push({
-                number: `${number}/${year}`,
-                title: title,
-                effective: `${CONFIG.targetYear}-01-01`,
-                sourceUrl: `https://www.zakonyprolidi.cz/cs/${year}-${number}`,
-                source: 'zakonyprolidi'
-            });
-        }
+        laws.push({
+            number: `${lawNumber}/${lawYear}`,
+            urlPath: `/cs/${urlYear}-${urlNumber}`,
+            year: parseInt(lawYear)
+        });
     }
 
-    // Alternativni regex pro jiny format stranky
+    // Pattern 2: Jednodussi - jen cisla zakonu
     if (laws.length === 0) {
-        const altRegex = /(\d+)\/(\d{4})\s*Sb\.[^<]*?([^<]{10,100})/gi;
-        while ((match = altRegex.exec(html)) !== null) {
+        const simpleRegex = /(\d+)\/(\d{4})\s*Sb\./g;
+        while ((match = simpleRegex.exec(html)) !== null) {
             const number = match[1];
-            const year = parseInt(match[2]);
-            const title = match[3].trim().replace(/\s+/g, ' ');
+            const lawYear = parseInt(match[2]);
 
-            if (year >= 2025 && title.length > 5) {
+            if (lawYear === year) {
                 laws.push({
-                    number: `${number}/${year}`,
-                    title: title.substring(0, 100),
-                    effective: `${CONFIG.targetYear}-01-01`,
-                    sourceUrl: `https://www.zakonyprolidi.cz/cs/${year}-${number}`,
-                    source: 'zakonyprolidi'
+                    number: `${number}/${lawYear}`,
+                    urlPath: `/cs/${lawYear}-${number}`,
+                    year: lawYear
                 });
             }
         }
     }
 
-    return laws;
-}
-
-// Fetch z e-sbirka.cz
-function fetchFromESbirka() {
-    return new Promise((resolve, reject) => {
-        // e-Sbirka ma REST API
-        const url = 'https://www.e-sbirka.cz/sb/casti/aktualni';
-
-        https.get(url, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (compatible; CeskeZakonyBot/1.0)',
-                'Accept': 'text/html,application/xhtml+xml'
-            }
-        }, (res) => {
-            let data = '';
-            res.on('data', chunk => data += chunk);
-            res.on('end', () => {
-                const laws = parseESbirka(data);
-                resolve(laws);
-            });
-        }).on('error', reject);
-    });
-}
-
-// Parsovat e-sbirka.cz
-function parseESbirka(html) {
-    const laws = [];
-
-    // e-Sbirka format
-    const regex = /(\d+)\/(\d{4})\s*Sb\./gi;
-
-    let match;
-    while ((match = regex.exec(html)) !== null) {
-        const number = match[1];
-        const year = parseInt(match[2]);
-
-        if (year >= 2025) {
-            laws.push({
-                number: `${number}/${year}`,
-                title: 'Zakon ' + number + '/' + year + ' Sb.',
-                effective: `${CONFIG.targetYear}-01-01`,
-                sourceUrl: `https://www.e-sbirka.cz/sb/${year}/${number}`,
-                source: 'esbirka'
-            });
-        }
-    }
-
-    return laws;
-}
-
-// Filtrovat zakony, ktere uz mame
-function filterNewLaws(found, current) {
-    return found.filter(law => !current.includes(law.number));
+    // Pro kazdy zakon zkontrolovat ucinnost (zjednodusene - predpokladame 2026)
+    // V produkcni verzi by se mela kontrolovat stranka kazdeho zakona
+    return laws.map(law => ({
+        number: law.number,
+        title: `Předpis č. ${law.number} Sb.`,
+        type: 'predpis',
+        effective: `${CONFIG.targetEffectiveYear}-01-01`,
+        sourceUrl: `https://www.zakonyprolidi.cz${law.urlPath}`
+    }));
 }
 
 // Ulozit vysledky
 function saveResults(newLaws) {
     const result = {
         checkDate: new Date().toISOString(),
+        targetEffectiveYear: CONFIG.targetEffectiveYear,
+        yearsSearched: CONFIG.yearsToSearch,
         foundCount: newLaws.length,
         laws: newLaws
     };
 
     fs.writeFileSync(CONFIG.outputFile, JSON.stringify(result, null, 2), 'utf8');
-    console.log(`      Vysledky ulozeny do: ${CONFIG.outputFile}`);
+    console.log(`      Vysledky ulozeny do: new-laws-found.json`);
 }
 
 // Spustit

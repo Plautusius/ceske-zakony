@@ -659,6 +659,202 @@ Právo odmítnout účast
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
       pdfUrl: "zakony-pdf/324-2025.pdf"
+    },
+    {
+      id: "88-2024",
+      number: "88/2024",
+      title: "Zákon o správě voleb",
+      fullTitle: "Zákon o správě voleb",
+      type: "zakon",
+      category: "ustavni",
+      published: "2024-04-16",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Komplexní zákon upravující správu všech typů voleb v ČR včetně korespondenčního hlasování ze zahraničí.",
+      keyPoints: [
+        "Jednotná pravidla pro všechny typy voleb (parlamentní, prezidentské, krajské, obecní, evropské)",
+        "Zavedení korespondenčního hlasování pro krajany v zahraničí",
+        "Nový informační systém pro evidenci voličů",
+        "Pravidla pro okrskové volební komise",
+        "Digitalizace volebních procesů"
+      ],
+      fullText: `ZÁKON
+ze dne 27. března 2024
+o správě voleb
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+OBECNÁ USTANOVENÍ
+
+§ 1
+Předmět úpravy
+
+Tento zákon upravuje
+a) společná pravidla pro správu voleb do Poslanecké sněmovny, Senátu, zastupitelstev krajů, zastupitelstev obcí, Evropského parlamentu a volby prezidenta republiky,
+b) působnost volebních orgánů,
+c) informační systém správy voleb,
+d) stálý seznam voličů a jeho vedení,
+e) hlasování v zahraničí včetně korespondenčního hlasování.
+
+§ 2
+Volební orgány
+
+(1) Volební orgány jsou:
+a) Ministerstvo vnitra,
+b) Český statistický úřad,
+c) krajské úřady,
+d) obecní úřady,
+e) zastupitelské úřady,
+f) okrskové volební komise.
+
+ČÁST DRUHÁ
+KORESPONDENČNÍ HLASOVÁNÍ
+
+§ 40
+Právo volit korespondenčně
+
+(1) Volič, který je zapsán ve zvláštním seznamu voličů vedeném zastupitelským úřadem, může při volbách do Poslanecké sněmovny a při volbě prezidenta republiky hlasovat korespondenčně.
+
+(2) Žádost o korespondenční hlasování lze podat nejpozději 40 dnů přede dnem voleb.
+
+§ 41
+Hlasovací dokumenty
+
+(1) Zastupitelský úřad zašle voliči, který požádal o korespondenční hlasování, hlasovací dokumenty nejpozději 21 dnů přede dnem voleb.
+
+(2) Hlasovací dokumenty obsahují:
+a) hlasovací lístky,
+b) identifikační lístek,
+c) doručovací obálku,
+d) úřední obálku,
+e) poučení o způsobu hlasování.
+
+ČÁST OSMÁ
+ÚČINNOST
+
+§ 120
+
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/88-2024.pdf"
+    },
+    {
+      id: "467-2025",
+      number: "467/2025",
+      title: "Vyhláška o požární prevenci",
+      fullTitle: "Vyhláška, kterou se mění vyhláška č. 246/2001 Sb., o požární prevenci",
+      type: "vyhlaska",
+      category: "sprava",
+      published: "2025-11-18",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Novela vyhlášky o požární bezpečnosti staveb s novými požadavky na dokumentaci a elektronické záznamy.",
+      keyPoints: [
+        "Rozšíření typů uznávané dokumentace (neautorizovaná, prováděcí)",
+        "Možnost elektronických záznamů o školení bez podpisů",
+        "Nové požadavky na požárně bezpečnostní řešení staveb",
+        "Zavedení požadavků na Central stop a Total stop",
+        "Nová příloha č. 7 pro hasicí systémy a detekci"
+      ],
+      fullText: `VYHLÁŠKA
+ze dne 12. listopadu 2025,
+kterou se mění vyhláška č. 246/2001 Sb., o stanovení podmínek požární bezpečnosti a výkonu státního požárního dozoru (vyhláška o požární prevenci)
+
+Ministerstvo vnitra stanoví podle § 101 zákona č. 133/1985 Sb., o požární ochraně:
+
+Čl. I
+
+Vyhláška č. 246/2001 Sb., o požární prevenci, se mění takto:
+
+1. V § 2 se za písmeno b) vkládají nová písmena c) a d), která znějí:
+"c) neautorizovanou dokumentací dokumentace zpracovaná osobou bez autorizace,
+d) prováděcí dokumentací dokumentace pro provádění stavby,"
+
+2. V § 36 odst. 1 se za slova "dokumentace školení" vkládají slova "v listinné nebo elektronické podobě".
+
+3. Za § 36 se vkládá nový § 36a, který zní:
+"§ 36a
+Elektronické záznamy o školení
+
+Záznamy o školeních a odborné přípravě mohou být vedeny v elektronické podobě bez vlastnoručních podpisů, pokud použitý systém zabezpečuje jejich systematické provádění a ochranu proti neoprávněným změnám."
+
+Čl. II
+Přechodné ustanovení
+
+Požárně bezpečnostní řešení předložená orgánu státního požárního dozoru přede dnem nabytí účinnosti této vyhlášky se posuzují podle dosavadních právních předpisů.
+
+Čl. III
+Účinnost
+
+Tato vyhláška nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/467-2025.pdf"
+    },
+    {
+      id: "573-2025",
+      number: "573/2025",
+      title: "Vyhláška o cestovních náhradách pro rok 2026",
+      fullTitle: "Vyhláška o změně sazby základní náhrady za používání silničních motorových vozidel a stravného pro rok 2026",
+      type: "vyhlaska",
+      category: "prace",
+      published: "2025-12-15",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Každoroční vyhláška stanovující sazby cestovních náhrad, stravného a ceny pohonných hmot pro rok 2026.",
+      keyPoints: [
+        "Sazba za použití osobního auta: 5,90 Kč/km",
+        "Sazba za jednostopá vozidla: 1,60 Kč/km",
+        "Stravné 5-12 hodin: 155 Kč",
+        "Stravné 12-18 hodin: 236 Kč",
+        "Stravné nad 18 hodin: 370 Kč",
+        "Cena benzínu 95: 34,70 Kč/l",
+        "Cena nafty: 34,10 Kč/l"
+      ],
+      fullText: `VYHLÁŠKA
+ze dne 10. prosince 2025
+o změně sazby základní náhrady za používání silničních motorových vozidel a stravného a o stanovení průměrné ceny pohonných hmot pro účely poskytování cestovních náhrad pro rok 2026
+
+Ministerstvo práce a sociálních věcí stanoví podle § 189 odst. 1 zákoníku práce:
+
+§ 1
+Sazba základní náhrady za používání silničních motorových vozidel
+
+Sazba základní náhrady za 1 km jízdy činí u
+a) jednostopých vozidel a tříkolek 1,60 Kč,
+b) osobních silničních motorových vozidel 5,90 Kč.
+
+§ 2
+Stravné
+
+Za každý kalendářní den pracovní cesty přísluší zaměstnanci stravné nejméně ve výši
+a) 155 Kč, trvá-li pracovní cesta 5 až 12 hodin,
+b) 236 Kč, trvá-li pracovní cesta déle než 12 hodin, nejdéle však 18 hodin,
+c) 370 Kč, trvá-li pracovní cesta déle než 18 hodin.
+
+§ 3
+Průměrná cena pohonných hmot
+
+Výše průměrné ceny pohonné hmoty činí
+a) 34,70 Kč za 1 litr benzinu automobilového 95 oktanů,
+b) 39,00 Kč za 1 litr benzinu automobilového 98 oktanů,
+c) 34,10 Kč za 1 litr motorové nafty,
+d) 7,20 Kč za 1 kilowatthodinu elektřiny.
+
+§ 4
+Zrušovací ustanovení
+
+Vyhláška č. 475/2024 Sb. se zrušuje.
+
+§ 5
+Účinnost
+
+Tato vyhláška nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/573-2025.pdf"
     }
   ],
   oldLaws: [
