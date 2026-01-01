@@ -2,7 +2,7 @@
 const lawsDatabase = {
   metadata: {
     lastUpdate: "2026-01-01",
-    totalLaws: 15,
+    totalLaws: 18,
     source: "Sbírka zákonů ČR"
   },
   categories: {
@@ -855,6 +855,316 @@ Vyhláška č. 475/2024 Sb. se zrušuje.
 
 Tato vyhláška nabývá účinnosti dnem 1. ledna 2026.`,
       pdfUrl: "zakony-pdf/573-2025.pdf"
+    },
+    {
+      id: "89-2024",
+      number: "89/2024",
+      title: "Změny volebních zákonů",
+      fullTitle: "Zákon, kterým se mění volební a některé další zákony v souvislosti s přijetím zákona o správě voleb",
+      type: "zakon",
+      category: "ustavni",
+      published: "2024-04-16",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Doprovodný zákon k zákonu o správě voleb, který mění pravidla pro všechny typy voleb v ČR.",
+      keyPoints: [
+        "Změny zákona o volbách do Poslanecké sněmovny",
+        "Změny zákona o volbách do Senátu",
+        "Změny zákona o volbách do zastupitelstev krajů a obcí",
+        "Změny zákona o volbě prezidenta republiky",
+        "Nové vymezení 81 senátních volebních obvodů"
+      ],
+      fullText: `ZÁKON
+ze dne 6. března 2024,
+kterým se mění volební a některé další zákony v souvislosti s přijetím zákona o správě voleb
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+Změna zákona o volbách do Parlamentu České republiky
+
+Čl. I
+Zákon č. 247/1995 Sb., o volbách do Parlamentu České republiky, se mění takto:
+
+1. V území České republiky se pro volby do Senátu vytváří 81 volebních obvodů.
+
+2. V každém volebním obvodu se volí jeden senátor.
+
+ČÁST OSMÁ
+ÚČINNOST
+
+Čl. VIII
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/89-2024.pdf"
+    },
+    {
+      id: "91-2024",
+      number: "91/2024",
+      title: "Zákon o munici",
+      fullTitle: "Zákon o munici",
+      type: "zakon",
+      category: "sprava",
+      published: "2024-04-16",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: false,
+      hasFullText: true,
+      description: "Nový zákon upravující nakládání s municí, pyrotechnický průzkum a výkon státní správy.",
+      keyPoints: [
+        "Samostatná právní úprava munice oddělená od zákona o zbraních",
+        "Nakládání s municí a muničními předměty",
+        "Pyrotechnický průzkum a likvidace munice",
+        "Zjednodušení administrativy pro držitele munice",
+        "Modernizace evidence a státního dozoru"
+      ],
+      fullText: `ZÁKON
+ze dne 6. března 2024
+o munici
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+ÚVODNÍ USTANOVENÍ
+
+§ 1
+Předmět úpravy
+
+(1) Tento zákon upravuje
+a) nakládání s municí,
+b) zacházení s neaktivním muničním předmětem,
+c) pyrotechnický průzkum,
+d) výkon státní správy na úseku munice.
+
+§ 2
+Vymezení pojmů
+
+Pro účely tohoto zákona se rozumí
+a) municí soubor výrobků, které obsahují výbušniny nebo pyrotechnické složení,
+b) muničním předmětem předmět obsahující nebo určený k tomu, aby obsahoval výbušninu,
+c) pyrotechnickým průzkumem činnost směřující k vyhledání a odstranění munice.
+
+ČÁST JEDENÁCTÁ
+ÚČINNOST
+
+§ 77
+
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      externalUrl: "https://www.zakonyprolidi.cz/cs/2024-91"
+    },
+    {
+      id: "120-2025",
+      number: "120/2025",
+      title: "Novela zákoníku práce",
+      fullTitle: "Zákon, kterým se mění zákon č. 262/2006 Sb., zákoník práce, a některé další zákony",
+      type: "zakon",
+      category: "prace",
+      published: "2025-04-29",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Novela zákoníku práce a dalších 7 zákonů týkající se zaměstnanosti a podpory v nezaměstnanosti.",
+      keyPoints: [
+        "Zvýšení podpory v nezaměstnanosti na 80% v prvních 2 měsících",
+        "Změny v zákoně o zaměstnanosti",
+        "Úpravy zákona o inspekci práce",
+        "Změny v zákoně o daních z příjmů",
+        "Nová pravidla pro uchazeče o zaměstnání"
+      ],
+      fullText: `ZÁKON
+ze dne 23. dubna 2025,
+kterým se mění zákon č. 262/2006 Sb., zákoník práce, ve znění pozdějších předpisů, a některé další zákony
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+Změna zákoníku práce
+
+Čl. I
+Zákon č. 262/2006 Sb., zákoník práce, se mění takto:
+
+1. V § 67 se doplňuje nový odstavec upravující podmínky pro výpověď.
+
+ČÁST ŠESTÁ
+Změna zákona o zaměstnanosti
+
+Čl. VI
+Zákon č. 435/2004 Sb., o zaměstnanosti, se mění takto:
+
+1. Podpora v nezaměstnanosti v prvních 2 měsících podpůrčí doby činí 80 % průměrného měsíčního čistého výdělku.
+
+ČÁST OSMÁ
+ÚČINNOST
+
+Čl. VIII
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/120-2025.pdf"
+    },
+    {
+      id: "176-2025",
+      number: "176/2025",
+      title: "Doprovodný zákon o podpoře bydlení",
+      fullTitle: "Zákon, kterým se mění některé zákony v souvislosti s přijetím zákona o podpoře bydlení",
+      type: "zakon",
+      category: "socialni",
+      published: "2025-05-28",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Změnový zákon k zákonu o podpoře bydlení měnící více než 12 právních předpisů.",
+      keyPoints: [
+        "Změny procesních pravidel pro vyklizení bytů",
+        "Úpravy daňových odpočtů souvisejících s bydlením",
+        "Změny v zákoně o důchodovém pojištění",
+        "Možnosti investic penzijních fondů do nemovitostí",
+        "Podpora bytové politiky ČR"
+      ],
+      fullText: `ZÁKON
+ze dne 14. května 2025,
+kterým se mění některé zákony v souvislosti s přijetím zákona o podpoře bydlení
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+Změna občanského soudního řádu
+
+Čl. I
+Zákon č. 99/1963 Sb., občanský soudní řád, se mění takto:
+
+1. V § 340 se upravují pravidla pro výkon rozhodnutí vyklizením.
+
+ČÁST DVANÁCTÁ
+ÚČINNOST
+
+Čl. XII
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/176-2025.pdf"
+    },
+    {
+      id: "285-2025",
+      number: "285/2025",
+      title: "Novela zákona o znalcích",
+      fullTitle: "Zákon, kterým se mění zákon č. 254/2019 Sb., o znalcích, znaleckých kancelářích a znaleckých ústavech",
+      type: "zakon",
+      category: "sprava",
+      published: "2025-08-12",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Novela zákona o znalcích a souvisejících předpisů včetně trestního řádu.",
+      keyPoints: [
+        "Změny podmínek pro znaleckou činnost",
+        "Úpravy v trestním řádu",
+        "Změny v občanském soudním řádu",
+        "Nová pravidla pro soudní tlumočníky",
+        "Elektronizace znalecké evidence"
+      ],
+      fullText: `ZÁKON
+ze dne 6. srpna 2025,
+kterým se mění zákon č. 254/2019 Sb., o znalcích, znaleckých kancelářích a znaleckých ústavech
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+Změna zákona o znalcích
+
+Čl. I
+Zákon č. 254/2019 Sb., o znalcích, znaleckých kancelářích a znaleckých ústavech, se mění takto:
+
+1. V § 5 se upravují požadavky na odbornou způsobilost znalce.
+
+ČÁST PÁTÁ
+ÚČINNOST
+
+Čl. V
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/285-2025.pdf"
+    },
+    {
+      id: "316-2025",
+      number: "316/2025",
+      title: "Novela zákona o účetnictví",
+      fullTitle: "Zákon, kterým se mění zákon č. 563/1991 Sb., o účetnictví, a zákon č. 93/2009 Sb., o auditorech",
+      type: "zakon",
+      category: "dane",
+      published: "2025-09-02",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Novela zavádějící nové požadavky na ESG reporting a zprávy o udržitelnosti.",
+      keyPoints: [
+        "Zvýšení hraničních hodnot pro kategorizaci podniků",
+        "Nové požadavky na zprávy o udržitelnosti (ESG)",
+        "Změny pravidel pro ověřování zpráv auditorem",
+        "Úpravy zákona o auditorech",
+        "Změny zákona o dorovnávacích daních"
+      ],
+      fullText: `ZÁKON
+ze dne 23. července 2025,
+kterým se mění zákon č. 563/1991 Sb., o účetnictví, ve znění pozdějších předpisů, a zákon č. 93/2009 Sb., o auditorech
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+ČÁST PRVNÍ
+Změna zákona o účetnictví
+
+Čl. I
+Zákon č. 563/1991 Sb., o účetnictví, se mění takto:
+
+1. V § 1a se upravují hraniční hodnoty pro kategorizaci účetních jednotek.
+
+2. Za § 21a se vkládá nový § 21b o zprávě o udržitelnosti.
+
+ČÁST TŘETÍ
+ÚČINNOST
+
+Čl. III
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/316-2025.pdf"
+    },
+    {
+      id: "522-2025",
+      number: "522/2025",
+      title: "Změna jednacího řádu Senátu",
+      fullTitle: "Zákon, kterým se mění zákon č. 107/1999 Sb., o jednacím řádu Senátu",
+      type: "zakon",
+      category: "ustavni",
+      published: "2025-12-10",
+      effective: "2026-01-01",
+      isNew: true,
+      hasPdf: true,
+      hasFullText: true,
+      description: "Novela jednacího řádu Senátu zavádějící elektronický systém pro tvorbu právních předpisů.",
+      keyPoints: [
+        "Elektronický systém pro tvorbu právních předpisů",
+        "Nové procedury pro podávání pozměňovacích návrhů",
+        "Rozšíření povinností pro informativní přehledy",
+        "Technické změny legislativního procesu",
+        "Modernizace práce Senátu"
+      ],
+      fullText: `ZÁKON
+ze dne 3. prosince 2025,
+kterým se mění zákon č. 107/1999 Sb., o jednacím řádu Senátu
+
+Parlament se usnesl na tomto zákoně České republiky:
+
+Čl. I
+Zákon č. 107/1999 Sb., o jednacím řádu Senátu, se mění takto:
+
+1. V § 72 se doplňuje ustanovení o elektronickém systému pro tvorbu právních předpisů.
+
+2. Doplňují se nové povinnosti týkající se informativních přehledů veřejnoprávních povinností.
+
+Čl. II
+Účinnost
+
+Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
+      pdfUrl: "zakony-pdf/522-2025.pdf"
     }
   ],
   oldLaws: [
