@@ -1306,6 +1306,9 @@ function previewTemplate(templateId) {
     document.getElementById('previewBody').textContent = template.content;
     document.getElementById('previewDownloadBtn').onclick = () => downloadTemplate(templateId);
 
+    // Reset scroll pozice na začátek
+    document.getElementById('previewBody').scrollTop = 0;
+
     document.getElementById('previewModal').classList.add('active');
     document.body.style.overflow = 'hidden';
 }
