@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Přehled nových zákonů ČR v plném znění s šablonami dokumentů pro podnikatele a jednotlivce">
+    <title>České Zákony - Nové předpisy a šablony dokumentů</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">České Zákony</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Zákony</a>
+                    <a href="sablony.html" class="nav-link">Šablony</a>
+                    <a href="#vyhledavani" class="nav-link">Vyhledávání</a>
+                    <a href="#o-projektu" class="nav-link">O projektu</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Přepnout téma">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link active">Zákony</a>
+        <a href="sablony.html" class="mobile-nav-link">Šablony</a>
+        <a href="#vyhledavani" class="mobile-nav-link">Vyhledávání</a>
+        <a href="#o-projektu" class="mobile-nav-link">O projektu</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Aktualizováno 2025</span>
+                <h1 class="hero-title">Nové zákony České republiky</h1>
+                <p class="hero-subtitle">Přehledný portál s novými právními předpisy v plném znění a šablonami dokumentů pro podnikatele i jednotlivce</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="totalLaws">475</span>
+                        <span class="stat-label">Předpisů 2025</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Kategorií</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Šablon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="vyhledavani">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Hledat v zákonech (např. 'daň', 'práce', '89/2012')...">
+                <button class="search-btn" id="searchBtn">
+                    <span>🔍</span> Hledat
+                </button>
+            </div>
+            <div class="filter-tags">
+                <button class="filter-tag active" data-category="all">Vše</button>
+                <button class="filter-tag" data-category="zakony">Zákony</button>
+                <button class="filter-tag" data-category="vyhlasky">Vyhlášky</button>
+                <button class="filter-tag" data-category="narizeni">Nařízení vlády</button>
+                <button class="filter-tag" data-category="nalezy">Nálezy ÚS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laws Grid -->
+    <section class="laws-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nejnovější předpisy</h2>
+                <div class="sort-options">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Nejnovější</option>
+                        <option value="oldest">Nejstarší</option>
+                        <option value="number">Podle čísla</option>
+                        <option value="effective">Podle účinnosti</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="laws-grid" id="lawsGrid">
+                <!-- Laws will be loaded here dynamically -->
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Načítám zákony...</p>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <span class="no-results-icon">📭</span>
+                <h3>Žádné výsledky</h3>
+                <p>Pro zadané kritéria nebyly nalezeny žádné předpisy.</p>
+            </div>
+
+            <button class="load-more-btn" id="loadMoreBtn">Načíst další předpisy</button>
+        </div>
+    </section>
+
+    <!-- Important Laws Section -->
+    <section class="important-section">
+        <div class="container">
+            <h2 class="section-title">Důležité zákony pro podnikatele</h2>
+            <div class="important-grid">
+                <a href="https://zakony.gov.cz/cs/89-2012-sb" target="_blank" class="important-card">
+                    <span class="important-icon">📜</span>
+                    <h3>Občanský zákoník</h3>
+                    <p>89/2012 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="https://zakony.gov.cz/cs/90-2012-sb" target="_blank" class="important-card">
+                    <span class="important-icon">🏢</span>
+                    <h3>Zákon o obchodních korporacích</h3>
+                    <p>90/2012 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="https://zakony.gov.cz/cs/262-2006-sb" target="_blank" class="important-card">
+                    <span class="important-icon">👷</span>
+                    <h3>Zákoník práce</h3>
+                    <p>262/2006 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="https://zakony.gov.cz/cs/235-2004-sb" target="_blank" class="important-card">
+                    <span class="important-icon">💰</span>
+                    <h3>Zákon o DPH</h3>
+                    <p>235/2004 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="https://zakony.gov.cz/cs/586-1992-sb" target="_blank" class="important-card">
+                    <span class="important-icon">📊</span>
+                    <h3>Zákon o daních z příjmů</h3>
+                    <p>586/1992 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="https://zakony.gov.cz/cs/455-1991-sb" target="_blank" class="important-card">
+                    <span class="important-icon">🛒</span>
+                    <h3>Živnostenský zákon</h3>
+                    <p>455/1991 Sb.</p>
+                    <span class="card-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Potřebujete šablony dokumentů?</h2>
+                <p>Připravili jsme pro vás vzory smluv, faktur a dalších dokumentů pro podnikatele i jednotlivce.</p>
+                <a href="sablony.html" class="cta-btn">Zobrazit šablony →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="o-projektu">
+        <div class="container">
+            <div class="about-content">
+                <h2>O projektu</h2>
+                <p>Tento portál slouží jako přehledný rozcestník k novým právním předpisům České republiky. Všechny zákony odkazují na oficiální zdroje:</p>
+                <div class="sources-list">
+                    <a href="https://zakony.gov.cz" target="_blank" class="source-link">
+                        <span class="source-icon">🏛️</span>
+                        <div>
+                            <strong>e-Sbírka (zakony.gov.cz)</strong>
+                            <p>Oficiální portál Ministerstva vnitra</p>
+                        </div>
+                    </a>
+                    <a href="https://www.zakonyprolidi.cz" target="_blank" class="source-link">
+                        <span class="source-icon">📚</span>
+                        <div>
+                            <strong>Zákony pro lidi</strong>
+                            <p>Přehledný portál s plným zněním zákonů</p>
+                        </div>
+                    </a>
+                    <a href="https://www.psp.cz/sqw/sbirka.sqw" target="_blank" class="source-link">
+                        <span class="source-icon">🏛️</span>
+                        <div>
+                            <strong>Poslanecká sněmovna</strong>
+                            <p>Sbírka zákonů Parlamentu ČR</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">České Zákony</span>
+                    <p>Přehledný portál nových právních předpisů ČR</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rychlé odkazy</h4>
+                    <a href="index.html">Zákony</a>
+                    <a href="sablony.html">Šablony</a>
+                    <a href="https://zakony.gov.cz" target="_blank">e-Sbírka</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategorie zákonů</h4>
+                    <a href="#" data-filter="obcanske">Občanské právo</a>
+                    <a href="#" data-filter="pracovni">Pracovní právo</a>
+                    <a href="#" data-filter="dane">Daňové zákony</a>
+                    <a href="#" data-filter="obchodni">Obchodní právo</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <p>Tento projekt je open-source.</p>
+                    <a href="https://github.com/Plautusius" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 České Zákony. Data pochází z veřejných zdrojů.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Zpět nahoru">↑</button>
+
+    <!-- Law Detail Modal -->
+    <div class="modal" id="lawModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge" id="modalBadge">Zákon</span>
+                <h2 class="modal-title" id="modalTitle">Název zákona</h2>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content loaded dynamically -->
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-btn primary" id="modalLinkFull" target="_blank">Zobrazit plné znění →</a>
+                <a href="#" class="modal-btn secondary" id="modalLinkPdf" target="_blank">Stáhnout PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

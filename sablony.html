@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vzory a šablony dokumentů pro podnikatele a jednotlivce - smlouvy, faktury, žádosti">
+    <title>Šablony dokumentů | České Zákony</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sablony.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">České Zákony</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Zákony</a>
+                    <a href="sablony.html" class="nav-link active">Šablony</a>
+                    <a href="index.html#vyhledavani" class="nav-link">Vyhledávání</a>
+                    <a href="index.html#o-projektu" class="nav-link">O projektu</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Přepnout téma">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link">Zákony</a>
+        <a href="sablony.html" class="mobile-nav-link active">Šablony</a>
+        <a href="index.html#vyhledavani" class="mobile-nav-link">Vyhledávání</a>
+        <a href="index.html#o-projektu" class="mobile-nav-link">O projektu</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero templates-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Zdarma ke stažení</span>
+                <h1 class="hero-title">Šablony dokumentů</h1>
+                <p class="hero-subtitle">Připravené vzory smluv, faktur a dalších dokumentů pro podnikatele i jednotlivce. Vše v souladu s platnou legislativou.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tags">
+                <button class="filter-tag active" data-category="all">Vše</button>
+                <button class="filter-tag" data-category="smlouvy">Smlouvy</button>
+                <button class="filter-tag" data-category="faktury">Faktury</button>
+                <button class="filter-tag" data-category="zadosti">Žádosti</button>
+                <button class="filter-tag" data-category="pracovni">Pracovní</button>
+                <button class="filter-tag" data-category="podnikani">Podnikání</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Grid -->
+    <section class="templates-section">
+        <div class="container">
+            <div class="templates-grid" id="templatesGrid">
+
+                <!-- Smlouvy -->
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">📄</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Kupní smlouva</h3>
+                        <p>Vzor kupní smlouvy dle občanského zákoníku (§ 2079 a násl.)</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('kupni-smlouva')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('kupni-smlouva')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">🏠</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Nájemní smlouva</h3>
+                        <p>Vzor nájemní smlouvy na byt dle § 2235 a násl. občanského zákoníku</p>
+                        <div class="template-meta">
+                            <span>📋 4 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('najemni-smlouva')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('najemni-smlouva')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">🔧</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Smlouva o dílo</h3>
+                        <p>Vzor smlouvy o dílo pro zhotovení věci nebo provedení práce</p>
+                        <div class="template-meta">
+                            <span>📋 3 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('smlouva-o-dilo')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('smlouva-o-dilo')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">💼</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Příkazní smlouva</h3>
+                        <p>Vzor příkazní smlouvy pro poskytování služeb</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('prikazni-smlouva')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('prikazni-smlouva')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">🤝</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Smlouva o spolupráci</h3>
+                        <p>Vzor smlouvy o obchodní spolupráci mezi podnikateli</p>
+                        <div class="template-meta">
+                            <span>📋 3 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('smlouva-o-spolupraci')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('smlouva-o-spolupraci')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="smlouvy">
+                    <div class="template-icon">💰</div>
+                    <div class="template-content">
+                        <span class="template-category">Smlouvy</span>
+                        <h3>Smlouva o půjčce</h3>
+                        <p>Vzor smlouvy o zápůjčce peněz dle § 2390 a násl. OZ</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('smlouva-o-pujcce')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('smlouva-o-pujcce')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <!-- Faktury -->
+                <article class="template-card" data-category="faktury">
+                    <div class="template-icon">🧾</div>
+                    <div class="template-content">
+                        <span class="template-category">Faktury</span>
+                        <h3>Faktura - plátce DPH</h3>
+                        <p>Vzor faktury pro plátce DPH se všemi povinnými náležitostmi</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 235/2004</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('faktura-dph')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('faktura-dph')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="faktury">
+                    <div class="template-icon">📝</div>
+                    <div class="template-content">
+                        <span class="template-category">Faktury</span>
+                        <h3>Faktura - neplátce DPH</h3>
+                        <p>Vzor faktury pro neplátce DPH (OSVČ, malý podnikatel)</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 563/1991</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('faktura-bez-dph')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('faktura-bez-dph')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="faktury">
+                    <div class="template-icon">🔄</div>
+                    <div class="template-content">
+                        <span class="template-category">Faktury</span>
+                        <h3>Zálohová faktura</h3>
+                        <p>Vzor zálohové faktury (proforma) před dodáním zboží/služby</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 563/1991</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('zalohova-faktura')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('zalohova-faktura')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="faktury">
+                    <div class="template-icon">↩️</div>
+                    <div class="template-content">
+                        <span class="template-category">Faktury</span>
+                        <h3>Dobropis</h3>
+                        <p>Vzor dobropisu (opravného daňového dokladu)</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 235/2004</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('dobropis')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('dobropis')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <!-- Žádosti -->
+                <article class="template-card" data-category="zadosti">
+                    <div class="template-icon">📬</div>
+                    <div class="template-content">
+                        <span class="template-category">Žádosti</span>
+                        <h3>Žádost o informace</h3>
+                        <p>Vzor žádosti dle zákona o svobodném přístupu k informacím</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 106/1999</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('zadost-informace')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('zadost-informace')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="zadosti">
+                    <div class="template-icon">🏛️</div>
+                    <div class="template-content">
+                        <span class="template-category">Žádosti</span>
+                        <h3>Žádost o stavební povolení</h3>
+                        <p>Vzor žádosti o vydání stavebního povolení</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle z. 183/2006</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('zadost-stavebni')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('zadost-stavebni')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="zadosti">
+                    <div class="template-icon">🛡️</div>
+                    <div class="template-content">
+                        <span class="template-category">Žádosti</span>
+                        <h3>Žádost GDPR - výmaz údajů</h3>
+                        <p>Vzor žádosti o výmaz osobních údajů dle GDPR</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle GDPR čl. 17</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('zadost-gdpr')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('zadost-gdpr')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="zadosti">
+                    <div class="template-icon">📋</div>
+                    <div class="template-content">
+                        <span class="template-category">Žádosti</span>
+                        <h3>Žádost o živnostenský list</h3>
+                        <p>Vzor ohlášení živnosti u živnostenského úřadu</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle z. 455/1991</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('zadost-zivnost')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('zadost-zivnost')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <!-- Pracovní -->
+                <article class="template-card" data-category="pracovni">
+                    <div class="template-icon">👔</div>
+                    <div class="template-content">
+                        <span class="template-category">Pracovní</span>
+                        <h3>Pracovní smlouva</h3>
+                        <p>Vzor pracovní smlouvy se všemi povinnými náležitostmi</p>
+                        <div class="template-meta">
+                            <span>📋 3 strany</span>
+                            <span>⚖️ Dle z. 262/2006</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('pracovni-smlouva')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('pracovni-smlouva')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="pracovni">
+                    <div class="template-icon">📤</div>
+                    <div class="template-content">
+                        <span class="template-category">Pracovní</span>
+                        <h3>Výpověď z pracovního poměru</h3>
+                        <p>Vzor výpovědi ze strany zaměstnance</p>
+                        <div class="template-meta">
+                            <span>📋 1 strana</span>
+                            <span>⚖️ Dle z. 262/2006</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('vypoved')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('vypoved')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="pracovni">
+                    <div class="template-icon">📋</div>
+                    <div class="template-content">
+                        <span class="template-category">Pracovní</span>
+                        <h3>DPP - Dohoda o provedení práce</h3>
+                        <p>Vzor dohody o provedení práce (do 300 hodin/rok)</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle z. 262/2006</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('dpp')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('dpp')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="pracovni">
+                    <div class="template-icon">📝</div>
+                    <div class="template-content">
+                        <span class="template-category">Pracovní</span>
+                        <h3>DPČ - Dohoda o pracovní činnosti</h3>
+                        <p>Vzor dohody o pracovní činnosti (max 20 hod/týden)</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle z. 262/2006</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('dpc')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('dpc')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <!-- Podnikání -->
+                <article class="template-card" data-category="podnikani">
+                    <div class="template-icon">🏢</div>
+                    <div class="template-content">
+                        <span class="template-category">Podnikání</span>
+                        <h3>Obchodní podmínky e-shop</h3>
+                        <p>Vzor obchodních podmínek pro internetový obchod</p>
+                        <div class="template-meta">
+                            <span>📋 5 stran</span>
+                            <span>⚖️ Dle z. 634/1992</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('obchodni-podminky')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('obchodni-podminky')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="podnikani">
+                    <div class="template-icon">🔒</div>
+                    <div class="template-content">
+                        <span class="template-category">Podnikání</span>
+                        <h3>Zásady ochrany osobních údajů</h3>
+                        <p>Vzor GDPR Privacy Policy pro webové stránky</p>
+                        <div class="template-meta">
+                            <span>📋 4 strany</span>
+                            <span>⚖️ Dle GDPR</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('gdpr-policy')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('gdpr-policy')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="podnikani">
+                    <div class="template-icon">📊</div>
+                    <div class="template-content">
+                        <span class="template-category">Podnikání</span>
+                        <h3>Podnikatelský plán</h3>
+                        <p>Vzor podnikatelského plánu pro banku nebo investory</p>
+                        <div class="template-meta">
+                            <span>📋 8 stran</span>
+                            <span>⚖️ Standardní vzor</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('podnikatelsky-plan')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('podnikatelsky-plan')">Stáhnout</button>
+                    </div>
+                </article>
+
+                <article class="template-card" data-category="podnikani">
+                    <div class="template-icon">🤫</div>
+                    <div class="template-content">
+                        <span class="template-category">Podnikání</span>
+                        <h3>NDA - Smlouva o mlčenlivosti</h3>
+                        <p>Vzor smlouvy o zachování důvěrnosti (NDA)</p>
+                        <div class="template-meta">
+                            <span>📋 2 strany</span>
+                            <span>⚖️ Dle OZ 89/2012</span>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="template-btn preview" onclick="previewTemplate('nda')">Náhled</button>
+                        <button class="template-btn download" onclick="downloadTemplate('nda')">Stáhnout</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-icon">⚠️</span>
+                    <h3>Důležité upozornění</h3>
+                    <p>Tyto šablony jsou pouze vzorové a slouží jako výchozí bod. Pro důležité právní dokumenty doporučujeme konzultaci s právníkem.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📝</span>
+                    <h3>Jak používat šablony</h3>
+                    <p>Stáhněte šablonu, vyplňte požadované údaje (označené [DOPLNIT]) a upravte dle vašich potřeb.</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🔄</span>
+                    <h3>Aktualizace</h3>
+                    <p>Šablony jsou pravidelně aktualizovány dle platné legislativy. Poslední aktualizace: leden 2025.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">České Zákony</span>
+                    <p>Přehledný portál nových právních předpisů ČR</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rychlé odkazy</h4>
+                    <a href="index.html">Zákony</a>
+                    <a href="sablony.html">Šablony</a>
+                    <a href="https://zakony.gov.cz" target="_blank">e-Sbírka</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategorie šablon</h4>
+                    <a href="#" onclick="filterTemplates('smlouvy')">Smlouvy</a>
+                    <a href="#" onclick="filterTemplates('faktury')">Faktury</a>
+                    <a href="#" onclick="filterTemplates('pracovni')">Pracovní</a>
+                    <a href="#" onclick="filterTemplates('podnikani')">Podnikání</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <p>Tento projekt je open-source.</p>
+                    <a href="https://github.com/Plautusius" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 České Zákony. Šablony jsou poskytovány zdarma.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Zpět nahoru">↑</button>
+
+    <!-- Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content preview-modal-content">
+            <button class="modal-close" id="previewModalClose">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">Náhled šablony</span>
+                <h2 class="modal-title" id="previewTitle">Název šablony</h2>
+            </div>
+            <div class="modal-body preview-body" id="previewBody">
+                <!-- Preview content -->
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn primary" id="previewDownloadBtn">Stáhnout šablonu</button>
+                <button class="modal-btn secondary" onclick="closePreviewModal()">Zavřít</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/sablony.js"></script>
+</body>
+</html>
