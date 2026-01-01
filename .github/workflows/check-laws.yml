@@ -1,0 +1,81 @@
+name: Kontrola novych zakonu
+
+on:
+  # Spustit kazde pondeli v 8:00 rano (CET)
+  schedule:
+    - cron: '0 7 * * 1'
+
+  # Moznost spustit rucne
+  workflow_dispatch:
+
+jobs:
+  check-new-laws:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Spustit kontrolu zakonu
+        id: check
+        continue-on-error: true
+        run: |
+          node scripts/check-new-laws.js
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+
+      - name: Nacist nalezene zakony
+        if: steps.check.outcome == 'failure'
+        id: read-laws
+        run: |
+          if [ -f new-laws-found.json ]; then
+            LAWS=$(cat new-laws-found.json)
+            echo "laws<<EOF" >> $GITHUB_OUTPUT
+            echo "$LAWS" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Odeslat email o novych zakonech
+        if: steps.check.outcome == 'failure'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Ceske Zakony - Nalezeny nove zakony!"
+          to: platlvlastislav1@gmail.com
+          from: Ceske Zakony Bot <${{ secrets.EMAIL_USERNAME }}>
+          body: |
+            Ahoj!
+
+            Automaticka kontrola nasla nove zakony, ktere jeste nejsou na portalu Ceske Zakony.
+
+            ========================================
+            NALEZENE ZAKONY:
+            ========================================
+
+            ${{ steps.read-laws.outputs.laws }}
+
+            ========================================
+
+            Co delat dal:
+            1. Otevri Claude Code
+            2. Rekni: "Pridej tyto nove zakony na portal Ceske Zakony: [cisla zakonu]"
+            3. Claude stahne plne zneni, vytvori PDF a aktualizuje web
+
+            Odkaz na repozitar:
+            https://github.com/${{ github.repository }}
+
+            --
+            Automaticky email od Ceske Zakony Bot
+
+      - name: Zadne nove zakony
+        if: steps.check.outcome == 'success'
+        run: |
+          echo "Zadne nove zakony nebyly nalezeny."
+          echo "Databaze je aktualni."
