@@ -92,8 +92,7 @@ Pěstování a držení konopí pro vlastní potřebu
 Účinnost
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/270-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-270"
+      pdfUrl: "zakony-pdf/270-2025.pdf"
     },
     {
       id: "90-2024",
@@ -201,8 +200,7 @@ f) prokázala odbornou způsobilost.
 § 180
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/90-2024.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2024-90"
+      pdfUrl: "zakony-pdf/90-2024.pdf"
     },
     {
       id: "175-2025",
@@ -290,8 +288,7 @@ c) poradenství v oblasti bydlení.
 § 65
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/175-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-175"
+      pdfUrl: "zakony-pdf/175-2025.pdf"
     },
     {
       id: "323-2025",
@@ -373,8 +370,7 @@ b) určené elektronické aplikace s ověřením identity.
 § 42
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/323-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-323"
+      pdfUrl: "zakony-pdf/323-2025.pdf"
     },
     {
       id: "234-2025",
@@ -451,8 +447,7 @@ c) v případě voleb do zastupitelstev krajů 7 000 000 Kč na jeden kraj.
 § 38
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/234-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-234"
+      pdfUrl: "zakony-pdf/234-2025.pdf"
     },
     {
       id: "87-2024",
@@ -513,8 +508,7 @@ V ústavním zákoně č. 110/1998 Sb., o bezpečnosti České republiky, se za 
 Čl. III
 
 Tento ústavní zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/87-2024.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2024-87"
+      pdfUrl: "zakony-pdf/87-2024.pdf"
     },
     {
       id: "288-2025",
@@ -589,8 +583,7 @@ c) dostupnosti srovnatelných prostředků.
 § 56
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/288-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-288"
+      pdfUrl: "zakony-pdf/288-2025.pdf"
     },
     {
       id: "324-2025",
@@ -665,8 +658,7 @@ Právo odmítnout účast
 Účinnost
 
 Tento zákon nabývá účinnosti dnem 1. ledna 2026.`,
-      pdfUrl: "/zakony-pdf/324-2025.pdf",
-      externalUrl: "https://www.zakonyprolidi.cz/cs/2025-324"
+      pdfUrl: "zakony-pdf/324-2025.pdf"
     }
   ],
   oldLaws: [

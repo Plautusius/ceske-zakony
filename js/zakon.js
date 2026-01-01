@@ -102,15 +102,21 @@ function renderLaw(law) {
         downloadBtn.download = `${law.id}.pdf`;
     }
 
-    // External Link
-    if (law.externalUrl) {
-        document.getElementById('externalLink').href = law.externalUrl;
+    // External Link - only for OLD laws
+    const externalLinkBtn = document.getElementById('externalLink');
+    if (!law.isNew && law.externalUrl) {
+        externalLinkBtn.href = law.externalUrl;
+        externalLinkBtn.style.display = 'inline-flex';
+    } else {
+        externalLinkBtn.style.display = 'none';
     }
 
-    // Old Law Notice
+    // Old Law Notice - only for old laws
     if (!law.isNew) {
         document.getElementById('oldLawNotice').style.display = 'block';
-        document.getElementById('oldLawLink').href = law.externalUrl;
+        if (law.externalUrl) {
+            document.getElementById('oldLawLink').href = law.externalUrl;
+        }
     }
 }
 
